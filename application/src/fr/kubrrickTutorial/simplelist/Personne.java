@@ -1,8 +1,14 @@
 package fr.kubrrickTutorial.simplelist;
 
-public class Personne {
+import java.io.Serializable;
+
+public class Personne implements Serializable {
 	
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8666933077489776257L;
 	private String nom;
 	private String prenom;
 	private int age;
