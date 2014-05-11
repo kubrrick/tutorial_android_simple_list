@@ -2,7 +2,6 @@ package fr.kubrrickTutorial.simplelist;
 
 import java.util.ArrayList;
 
-import android.app.Activity;
 import android.app.ListActivity;
 import android.os.Bundle;
 
@@ -17,6 +16,7 @@ public class Main extends ListActivity {
 		setContentView(R.layout.layout_main);
 		
 		listAdapter = new ListAdapter(this, preparePersonneList());
+		setListAdapter(listAdapter);
 		
 	}
 	
