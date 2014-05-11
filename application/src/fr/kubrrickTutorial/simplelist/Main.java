@@ -3,6 +3,7 @@ package fr.kubrrickTutorial.simplelist;
 import java.util.ArrayList;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
@@ -26,6 +27,10 @@ public class Main extends ListActivity {
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 		super.onListItemClick(l, v, position, id);
+		
+		Intent i = new Intent(this, Detail.class);
+		i.putExtra("personne", (Personne) listAdapter.getItem(position));
+		startActivity(i);
 
 	}
 	
