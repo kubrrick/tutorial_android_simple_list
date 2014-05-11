@@ -28,6 +28,12 @@ public class Main extends ListActivity {
 		personneList.add(new Personne("Enderlin", "Morgan", 21));
 		personneList.add(new Personne("Barakowsky", "Baptiste", 22));
 		personneList.add(new Personne("Meyer", "Franck", 20));
+		personneList.add(new Personne("Zorn", "Nicolas", 22));
+		personneList.add(new Personne("Arnold", "Loïc", 22));
+		personneList.add(new Personne("Bruno", "Guillaume", 22));
+		personneList.add(new Personne("Ta", "Guillaume", 20));
+		personneList.add(new Personne("Jobs", "Steve", 56));
+		personneList.add(new Personne("Bauer", "Adrien", 22));
 		return personneList;
 	}
 	
