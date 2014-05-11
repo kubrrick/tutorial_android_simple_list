@@ -38,20 +38,21 @@ public class ListAdapter extends BaseAdapter {
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		
-		TextView nom, prenom, age;
-		
-		LayoutInflater inflater = (LayoutInflater) context.getSystemService (Context.LAYOUT_INFLATER_SERVICE);
-		convertView = inflater.inflate(R.layout.cell, null);
-		
-		nom = (TextView) convertView.findViewById(R.id.nom);
-		prenom = (TextView) convertView.findViewById(R.id.prenom);
-		age = (TextView) convertView.findViewById(R.id.age);
-		
-		
-		nom.setText(personneList.get(position).getNom());
-		prenom.setText(personneList.get(position).getPrenom());
-		age.setText(String.valueOf(personneList.get(position).getAge()));
-		
+		if(convertView == null){
+			TextView nom, prenom, age;
+			
+			LayoutInflater inflater = (LayoutInflater) context.getSystemService (Context.LAYOUT_INFLATER_SERVICE);
+			convertView = inflater.inflate(R.layout.cell, null);
+			
+			nom = (TextView) convertView.findViewById(R.id.nom);
+			prenom = (TextView) convertView.findViewById(R.id.prenom);
+			age = (TextView) convertView.findViewById(R.id.age);
+			
+			
+			nom.setText(personneList.get(position).getNom());
+			prenom.setText(personneList.get(position).getPrenom());
+			age.setText(String.valueOf(personneList.get(position).getAge()));
+		}
 		
 		return convertView;
 	}
